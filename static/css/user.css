@@ -1,0 +1,371 @@
+/* ===========个人主页===============*/
+h4.userm{
+    font-weight: bold;
+}
+
+/* 基本信息 */
+.shortinfo{
+    margin: 10px;
+}
+img[name="usermd"]{
+    width: 160px;
+    height: 170px;
+}
+.meshortinfo{
+    padding: 0;
+    margin-top: 5px;
+    margin-left: 40px;
+}
+li.user-info{
+    margin-bottom: 6px;
+    color: #808080;
+}
+
+/* 我的活动 */
+.meact{
+    margin-top: 13px;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+.meactlist,.mebclist{
+    padding-top: 5px;
+}
+p.meact-header,p.mebc-header{
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+p.meact-info,p.mebc-info {
+    font-size: 13px;
+    color: #808080;
+}
+span.counts{
+    font-size: 13px;
+    margin-left: 40px;
+}
+
+/*我的动态*/
+.mebroadcast{
+    margin-top: 13px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+/*我的留言,活动评论*/
+span.counts{
+    font-size: 13px;
+    margin-left: 40px;
+}
+.othermess{
+    margin-top: 13px;
+    padding-left: 10px;
+    margin-bottom: 7px;
+}
+.volmess{
+    margin-top: 13px;
+    padding-left: 25px;
+    margin-bottom: 7px;
+}
+ul.othermess{
+    float: left;
+    padding-left: 2px;
+    padding-top: 2px;
+    margin-top: 10px;
+}
+li.listmess{
+    float: left;
+    margin-bottom: 15px;
+}
+img[name="usersm"]{
+    width: 55px;
+    height: 55px;
+    margin: 0 0 0 0;
+}
+.mess-photo{
+    float: left;
+    display: inline;
+    padding-top: 5px;
+}
+.mess-info{
+    margin-left: 70px;
+}
+span.mess-ut{
+    color: #808080;
+    font-size: 12px;
+}
+.mess-body{
+    font-size: 13px;
+    float: right;
+    display: inline;
+    margin-left: 70px;
+    margin-top: -33px;
+}
+
+/*留言板*/
+.leavemessage{
+    padding-right: 0;
+    padding-left: 10px;
+    margin-bottom: 40px;
+}
+.volleavemessage{
+    padding-right: 0;
+    padding-left: 25px;
+    margin-bottom: 40px;
+}
+.btnmess{
+    margin-top: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+/*=====================用户全部列表=====================*/
+/*global header/footer */
+img[name="userlistsm"] {
+    width: 55px;
+    height: 55px;
+    margin: 7px 0 0 0;
+}
+.userlist-photo{
+    float: left;
+}
+.userlist-title{
+    float: left;
+    margin-left: 20px;
+}
+.manalist-title{
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+/* 分页 */
+.splitpage{
+    float: left;
+    margin-bottom: 30px;
+    margin-left: 400px;
+}
+
+/*=====我的全部动态,留言列表=====*/
+.mebroadcastlist{
+    margin: 35px 160px 40px;
+    padding-left: 15px;
+}
+.othermesslist{
+    margin: 35px 20px 30px 160px;
+}
+/** timeline **/
+.item{
+    width: 360px;
+    margin: 20px 12px 20px;
+    float: left;
+    background-color:rgba(221, 220, 220, 0.71);
+    border: 1px #000000;
+    min-height: 50px;
+    text-align: justify;
+    word-wrap: break-word;
+}
+.inner{
+    padding: 10px;
+}
+/*timeline navigatior css*/
+.timeline_container{
+    width: 16px;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+}
+.timeline{
+    margin: 0 auto;
+    background-color: lightblue;
+    display: block;
+    float: left;
+    height: 100%;
+    left: 381px;
+    margin-top: 10px;
+    position: absolute;
+    width: 6px;
+}
+.timeline:hover{
+    cursor: pointer;
+    margin: 0 auto;
+}
+.timeline div.plus{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    left: -6px;
+}
+/*arrow css style*/
+.rightCorner{
+    display: block;
+    height: 15px;
+    margin-left: 358px;
+    margin-top: 15px;
+    padding: 0;
+    vertical-align: top;
+    width: 13px;
+    z-index: 2;
+    position: absolute;
+}
+.leftCorner{
+    display: block;
+    height: 15px;
+    margin-left: -11px;
+    margin-top: 8px;
+    width: 13px;
+    z-index: 2;
+    position: absolute;
+}
+.glyphicon-chevron-right, .glyphicon-chevron-left{
+    color: rgba(221, 220, 220, 0.71);
+}
+
+.loading {
+	/*background:#c1c39a;*/
+	/*color:#303030;*/
+	/*font-size:20px;*/
+	/*padding:5px 20px;*/
+	/*text-align:center;*/
+	/*width:450px;*/
+	/*margin:30px 150px 0px ;*/
+	display:none;
+	/*border-radius: 5px;*/
+}
+
+/*=====我的全部活动列表=====*/
+.actchoicelist{
+    margin: 68px 0 30px 68px;
+}
+.meactlists{
+    margin: 0px 20px 30px 160px;
+}
+li.act-info{
+    margin-top: 4px;
+    color: #808080;
+}
+
+/*====================用户信息修改=====================*/
+.form-infochange{
+    margin: 20px 0px 30px 20px;
+}
+label.info {
+    margin-top: 7px;
+}
+label.infochange{
+    margin-left: 20px;
+}
+.choicephoto {
+    margin-top: 20px;
+}
+
+.changeemail{
+    margin-top: 10px;
+    padding: 0;
+}
+.changepwd{
+    margin-top: 15px;
+    height: 83%;
+}
+.pwslable{
+    margin-top: 6px;
+    margin-left: 10px;
+    padding-right: 0;
+}
+
+/* 头像上传预览裁剪*/
+#preview_wrapper {
+    background-color: #808080;
+    width: 170px;
+    height: 170px;
+    font-size: 24px;
+}
+.jcrop-holder{
+    display: inline-block;
+    float: left;
+}
+#preview_fake, #preview{
+    width: 170px;
+    height: 170px;
+}
+#previewsm{
+    background-color: lightgrey;
+    float: left;
+    margin-left: 30px;
+}
+
+/*活动全部成员*/
+.userchoicelists{
+    margin: 68px 0 30px 25px;
+}
+.actuserlists{
+    margin: 0 0 30px 115px;
+}
+li.actmember{
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+ /*所有管理者列表*/
+li.managers{
+    margin-right: 25px;
+    margin-bottom: 15px;
+    padding: 0;
+}
+p.managername{
+    margin-top: 7px;
+}
+
+.actchoice:hover{
+    text-decoration: none;
+}
+a.actchoice{
+    margin-right: 10px;
+}
+
+
+/*发布新闻,申请活动*/
+.secondtitle,.postfile{
+    margin-left: 20;
+}
+.formheader{
+    margin-bottom: 30px;
+}
+
+/*progress bar*/
+.deallist{
+    margin: 10px 0 30px 0;
+}
+.deal{
+    margin-bottom: 10px;
+}
+.dealitem{
+    margin-right: 15px;
+}
+a.dealwith:hover{
+    background-color: lightgoldenrodyellow;
+    text-decoration: none;
+}
+
+/*审核*/
+.postlist{
+    margin: 20px 0 40px 350px;
+}
+.dealact{
+    padding-left: 35px;
+}
+
+/*统计信息*/
+.diffsta{
+    margin: 8px 0 10px;
+}
+#activity,#news,#acttime,#qualifiedvol,#registedvol,#distribution,#manager,#volunteer{
+    margin-left: 60px;
+}
+.pagecenter{
+    margin-left: 260px;
+}
+
+/*评比*/
+.appraise{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

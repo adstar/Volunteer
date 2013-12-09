@@ -1,0 +1,127 @@
+<html>
+	<head>
+        <title>Home</title>
+        
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="四川大学青年志愿者服务网">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <!-- custom CSS here -->
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+
+        <!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <!-- custom JavaScipt -->
+
+	</head>
+
+	<body>
+
+        {% include 'header_raw.html' %}
+
+        <div class="container">
+            <div class="row">
+                <!--滑动展示-->
+                <div class="homeshow col-md-8">
+                     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                     
+                     <!-- Indicators -->
+                     <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        {% for i in activityNews %}
+                        {% if not forloop.first %}
+                        <li data-target="#myCarousel" data-slide-to="{{ forloop.counter }}"></li>
+                        {% endif %}
+                        {% endfor %}
+                     </ol>
+                    <!-- Slider内容 -->
+                     <div class="carousel-inner">
+                       <!-- 第一个Slider -->
+                     <div class="item active">
+                        <img src="/static/images/01.jpg" alt="First slide" class="show" >
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3> {{ activityNews.0 }} </h3>
+                                <!-- 显示字数为前40个字 -->
+                                <p> {{ activityNews.0.news_body|truncatechars:40 }} </p>
+                            </div>
+                        </div>
+                     </div>
+                     <!-- 后三个Slider -->
+                     {% for news in activityNews|slice:"1:" %}
+                     <div class="item">
+                        <img src="/static/images/01.jpg" alt="Second slide">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h3>{{ news.news_title }}</h3>
+                                <!-- 显示字数为前40个字 -->
+                                <p>{{ news.news_body|truncatechars:40 }}</p>
+                            </div>
+                        </div>
+                     </div>
+                     {% endfor %}
+                  </div>
+                  <!-- /Slider内容 -->
+
+                  <!-- Slider左右箭头-->
+                     <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                     <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div><!-- /.carousel -->
+            </div>
+
+                <!--活动回顾-->
+                <div class="homereview col-md-4">
+                    <h4 class="activity">活动回顾</h4>
+                    <div class="reviewlist">
+                        {% for act in activityFinished %}
+                        <span>
+                          <p class="reviewact-header"><a href="{% url 'activityDetail' %}"> {{ act.act_title }}</a></p>
+                            <p class="reviewact-info">{{ act.team_id }}   {{ act.act_time|date:'Y-m-d' }}</p>
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!--正在举办的活动-->
+                <div class="nowactivity col-md-8">
+                    <h4 class="activity nowactivity-header">当前活动</h4>
+                        <!--当前活动 标题 时间 地点 服务队-->
+                        {% for act in activityUnFinished %}
+                        <div class="nowactivity-body col-md-3">
+                            <a href="{% url 'activityDetail' %}"><img name="nowacts" src="/static/images/01.jpg" alt="activity01"></a>
+                            <p class="subtitle"><a href="{% url 'activityDetail' %}">{{ act.act_ttile }}</a></p>
+                            <ul class="list-unstyled">
+                              <li class="nowact-info">{{ act.act_time|date:'Y-m-d' }}</li>
+                              <li class="nowact-info">{{ act.act_place }}</li>
+                              <li class="nowact-info">{{ act.team_id }}</li>
+                            </ul>
+                        </div>
+                        {% endfor %}
+
+                 </div>
+
+                <!--相关链接-->
+                <div class="homerelative col-md-4">
+                    <h4 class="activity">相关链接</h4>
+                    <ul class="list-unstyled rellink">
+                        <li class="rellink"><a href="">四川大学</a> </li>
+                        <li class="rellink"><a href="">团委</a> </li>
+                        <li class="rellink"><a href="">社区支教</a> </li>
+                        <li class="rellink"><a href="">社区支教</a> </li>
+                        <li class="rellink"><a href="">社区支教</a> </li>
+                        <li class="rellink"><a href="">社区支教</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {% include 'footer.html' %}
+
+    </body>
+
+</html>

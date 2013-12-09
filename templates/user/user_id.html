@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>用户个人主页</title>
+
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="四川大学青年志愿者服务网">
+        <meta name="author" content="zou">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <!-- custom CSS here -->
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link rel="stylesheet" href="/static/css/user.css">
+
+        <!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <!-- custom JavaScipt -->
+
+    </head>
+
+    <body>
+
+        {% include 'header_raw.html' %}
+
+        <div class="container">
+            <div class="row shortinfo">
+                <!--用户头像-->
+                <div class="col-sm-offset-1 col-sm-2">
+                    <img src="/static/images/01.jpg" alt="" name="usermd" class="img-responsive">
+                </div>
+                <!--用户基本信息-->
+                <div class="col-md-4 meshortinfo">
+                    <ul class="list-unstyled">
+                        <li class="user-info">(姓名)</li>
+                        <li class="user-info">(学院)</li>
+                        <li class="user-info">活动总时长:XX小时</li>
+                        <li class="user-info">个人荣誉:</li>
+                        <li class="user-info"><a href="{% url 'userInfoChange' %}">设置</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+            <!--用户的活动 4个-->
+            <div class="col-sm-offset-1 col-md-5 meact">
+                <h4 class="userm">我的活动<span class="counts"><a href="{% url 'userActivityList' %}">(全部X个)</a> </span></h4>
+                <div class="meactlist">
+                <span>
+                    <p class="meact-header"><a href="{% url 'activityDetail' %}">和平小区支教</a></p>
+                    <p class="meact-info">2013-10-11 9:00-12:00  武侯区</p>
+                </span>
+                <span>
+                    <p class="meact-header"><a href="{% url 'activityDetail' %}">和平小区支教</a></p>
+                    <p class="meact-info">2013-10-11 9:00-12:00  青羊区</p>
+                </span>
+                <span>
+                    <p class="meact-header"><a href="{% url 'activityDetail' %}">和平小区支教</a></p>
+                    <p class="meact-info">2013-10-11 9:00-12:00  武侯区</p>
+                </span>
+                <span>
+                    <p class="meact-header"><a href="{% url 'activityDetail' %}">和平小区支教</a></p>
+                    <p class="meact-info">2013-10-11 9:00-12:00  青羊区</p>
+                </span>
+                </div>
+            </div>
+            <!--用户的动态 4个-->
+            <div class=" col-md-4 mebroadcast">
+                <h4 class="userm">我的动态<span class="counts"><a href="{% url 'userBroadcastList' %}">(全部)</a> </span></h4>
+                <div class="mebclist">
+                <span>
+                    <p class="mebc-header">报名<a href="{% url 'activityDetail' %}">和平小区支教</a></p>
+                    <p class="mebc-info">2013-10-11</p>
+                </span>
+                <span>
+                    <p class="mebc-header">感兴趣<a href="{% url 'activityDetail' %}">和平小区支教</a></p>
+                    <p class="mebc-info">2013-10-11</p>
+                </span>
+                <span>
+                    <p class="mebc-header">给<a href="{% url 'activityDetail' %}">和平小区支教</a>留言</p>
+                    <p class="mebc-info">2013-10-11</p>
+                </span>
+                <span>
+                    <p class="mebc-header">评价<a href="{% url 'activityDetail' %}">和平小区支教</a></p>
+                    <p class="mebc-info">2013-10-11</p>
+                </span>
+                <span>
+                    <p class="mebc-header">获得<a href="{% url 'activityDetail' %}">优秀志愿者</a>称号</p>
+                    <p class="mebc-info">2013-10-11</p>
+                </span>
+                </div>
+            </div>
+            </div>
+
+            <!--用户的留言-->
+            <div class="col-sm-offset-1 col-md-8 othermess">
+                <h4 class="userm">我的留言<span class="counts"><a href="{% url 'userMessageList' %}">(全部)</a> </span></h4>
+                <ul class="list-unstyled othermess">
+                    <li class="listmess">
+                        <div class="mess-photo">
+                            <img src="/static/images/01.jpg" name="usersm">
+                        </div>
+                        <div class="mess-info">
+                            <span class="mess-ut">Jan_zou  2012.12.2 23:55</span>
+                        </div>
+                        <div class="mess-body">
+                            <span>确实，table算不得好用了。。你们老师真有远见，我学html的时候，，老师咋就不提醒一下呢。确实，table算不得好用了。。你们老师真有远见，我学html的时候，，老师咋就不提醒一下呢。。</span>
+                        </div>
+                    </li>
+                    <li class="listmess">
+                        <div class="mess-photo">
+                            <img src="/static/images/01.jpg" name="usersm">
+                        </div>
+                        <div class="mess-info">
+                            <span class="mess-ut">Jan_zou  2012.12.2 23:55</span>
+                        </div>
+                        <div class="mess-body">
+                            <span>确实，table算不得好用了。。你们老师真有远见，我学html的时候，，老师咋就不提醒一下呢。确实，table算不得好用了。。你们老师真有远见，我学html的时候，，老师咋就不提醒一下呢。。</span>
+                        </div>
+                    </li>
+                    <li class="listmess">
+                        <div class="mess-photo">
+                            <img src="/static/images/01.jpg" name="usersm">
+                        </div>
+                        <div class="mess-info">
+                            <span class="mess-ut">Jan_zou  2012.12.2 23:55</span>
+                        </div>
+                        <div class="mess-body">
+                            <span>确实，table算不得好用了。。你们老师真有远见，我学html的时候，，老师咋就不提醒一下呢。确实，table算不得好用了。。你们老师真有远见，我学html的时候，，老师咋就不提醒一下呢。。</span>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <!--留言板-->
+            <div class="col-sm-offset-1 col-md-8 leavemessage">
+                <h4 class="userm">留言板</h4>
+                <textarea class="form-control" rows="4" ></textarea>
+                <button type="button" class="btn btn-sm btn-default btnmess">留言</button>
+            </div>
+        </div>
+
+        {% include 'footer.html' %}
+
+    </body>
+</html>

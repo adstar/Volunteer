@@ -1,0 +1,4 @@
+Web前端开发规范
+
+1.所有Javascript文件放入static/js文件夹，所有CSS文件放入static/css文件夹，
+所有图片放入static/images文件夹.

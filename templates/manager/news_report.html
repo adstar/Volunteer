@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>发布新闻稿</title>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="四川大学青年志愿者服务网 发布新闻">
+    <meta name="author" content="zou">
+
+    <!--Bootstrap style-->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="/static/css/datetimepicker.min.css" rel="stylesheet">
+    <!--custom Style-->
+    <link href="/static/css/common.css" rel="stylesheet">
+    <link href="/static/css/user.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    {% include 'header_mana.html' %}
+    <div class="container">
+        <div class="row col-sm-offset-1 col-md-5 formheader">
+             <div class="secondtitle">
+                <h2>发布新闻稿</h2>
+             </div>
+        </div>
+
+        <div class="row col-sm-offset-1 col-md-9 formbody">
+            <form class="form-horizontal"  role="form">
+                <!--新闻标题-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">新闻标题：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="请输入新闻标题">
+                    </div>
+                </div>
+                <!--发布时间-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">发布时间：</label>
+                    <div class="input-group date form_datetime col-sm-4">
+                        <input class="form-control" type="text" value="" placeholder="请选择发布时间">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                </div>
+                <!--发布者-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">发布方：</label>
+                    <div class="col-sm-4">
+                        <label class="info">朝阳志愿服务队</label>
+                    </div>
+                </div>
+                <!--新闻照片-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">上传照片：</label>
+                    <div class="col-sm-5">
+                        <input type="file">
+                    </div>
+                </div>
+                <!--新闻正文-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">新闻正文：</label>
+                    <div class="col-md-10">
+                        <textarea>your content here</textarea>
+                    </div>
+                </div>
+                <!--提交-->
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <button type="submit" class="btn btn-primary active">发布</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+    <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/js/datetimepicker.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/static/js/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="/static/js/tinymce/tinymce.min.js"></script>
+
+    <script>
+    $('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        autoclose: 1,
+        todayHighlight: true,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+
+    tinymce.init({
+        selector:'textarea',
+        plugins: [
+                "advlist autolink lists link image charmap preview",
+                "searchreplace visualblocks fullscreen",
+                "insertdatetime table contextmenu paste"
+            ],
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    });
+    </script>
+
+
+</body>
+</html>

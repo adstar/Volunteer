@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>申请活动</title>
+        <meta charset="utf-8">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <link href="/static/css/datetimepicker.min.css" rel="stylesheet">
+        <!-- custom CSS here -->
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link rel="stylesheet" href="/static/css/user.css">
+
+
+    </head>
+
+    <body>
+
+        {% include 'header_mana.html' %}
+
+        <div class="container">
+        <div class="row col-sm-offset-1 col-md-5 formheader">
+             <div>
+                <h2>申请活动</h2>
+             </div>
+        </div>
+
+        <div class="row col-sm-offset-1 col-md-9 formbody">
+            <form class="form-horizontal"  role="form">
+                <!--活动标题-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动标题：</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" placeholder="请输入活动标题">
+                    </div>
+                </div>
+                <!--活动类型-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动类型：</label>
+                    <div class="col-sm-4">
+                        <select class="form-control">
+                            <option>校园教辅</option>
+                            <option>校园生活</option>
+                            <option>社区建设</option>
+                            <option>关爱青少年</option>
+                            <option>扶老助残</option>
+                            <option>救防保健</option>
+                            <option>其他</option>
+                        </select>
+                    </div>
+                </div>
+                <!--活动时间-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动时间：</label>
+                    <div class="input-group date form_datetime col-sm-4">
+                        <input class="form-control" type="text" placeholder="请选择活动开始时间">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="input-group date form_datetime col-sm-4">
+                        <input class="form-control" type="text" placeholder="请选择活动结束时间">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </div>
+                </div>
+                <!--活动地点-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动地点：</label>
+                    <div class="col-sm-5">
+                        <ul class="list-inline">
+                            <!--<li>四川省成都市</li>-->
+                            <li>
+                                <select class="form-control">
+                                    <option>锦江区</option>
+                                    <option>青羊区</option>
+                                    <option>金牛区</option>
+                                    <option>武侯区</option>
+                                    <option>成华区</option>
+                                    <option>龙泉驿区</option>
+                                    <option>青白江区</option>
+                                    <option>新都区</option>
+                                    <option>温江区</option>
+                                    <option>金堂县</option>
+                                    <option>双流县</option>
+                                    <option>郫县</option>
+                                    <option>大邑县</option>
+                                    <option>蒲江县</option>
+                                    <option>新津县</option>
+                                    <option>都江堰市</option>
+                                    <option>彭州市</option>
+                                    <option>邛崃市</option>
+                                    <option>崇州市</option>
+                                </select>
+                            </li>
+                            <li>
+                                <input type="text" class="form-control" placeholder="请输入具体地点">
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <!--活动组织方-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动组织方：</label>
+                    <div class="col-sm-4">
+                        <label class="info">朝阳志愿服务队</label>
+                    </div>
+                </div>
+                <!--活动海报-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">上传海报：</label>
+                    <div class="col-sm-5">
+                        <input type="file">
+                    </div>
+                </div>
+                <!--活动策划-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">上传策划：</label>
+                    <div class="col-sm-5">
+                        <input type="file">
+                    </div>
+                </div>
+                <!--活动详情-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">活动详情：</label>
+                    <div class="col-md-10">
+                        <textarea></textarea>
+                    </div>
+                </div>
+                <!--提交-->
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-4">
+                        <button type="submit" class="btn btn-primary active">提交</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        </div>
+
+
+
+        {% include 'footer.html' %}
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/js/datetimepicker.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="/static/js/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script type="application/javascript" src="/static/js/tinymce/tinymce.min.js"></script>
+
+    <script>
+    $('.form_datetime').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        autoclose: 1,
+        todayHighlight: true,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+
+    tinymce.init({
+        selector:'textarea',
+        plugins: [
+                "advlist autolink lists link image charmap preview",
+                "searchreplace visualblocks fullscreen",
+                "insertdatetime table contextmenu paste"
+            ],
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+    });
+    </script>
+
+    </body>
+</html>

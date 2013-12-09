@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>统计信息</title>
+
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="四川大学青年志愿者服务网 统计信息">
+        <meta name="author" content="zou">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <!-- custom CSS here -->
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link rel="stylesheet" href="/static/css/user.css">
+
+    </head>
+    <body>
+
+        {% include 'header_mana.html' %}
+        <div class="container">
+            <div class="row col-sm-offset-1 col-md-7">
+                <div class="secondtitle">
+                    <h2>XXX服务队统计信息</h2>
+                </div>
+
+                <div class="row col-md-10 diffsta">
+                   <ul class="list-inline tabs">
+                    <li><a class="dealwith" data-toggle="tab" href="#activity">活动信息</a> </li>
+                    <li><a class="dealwith" data-toggle="tab" href="#news">新闻信息</a> </li>
+                    <li><a class="dealwith" data-toggle="tab" href="#acttime">时间信息</a> </li>
+                    <li class="dropdown">
+                        <a class="dealwith" data-toggle="dropdown" href="#">志愿者信息<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a data-toggle="tab" href="#qualifiedvol">合格志愿者</a> </li>
+                            <li><a data-toggle="tab" href="#registedvol">注册志愿者</a> </li>
+                            <li><a data-toggle="tab" href="#distribution">志愿者分布</a> </li>
+                        </ul>
+                    </li>
+                   </ul>
+                </div>
+            </div>
+
+            <!--tab panes-->
+            <div class="tab-content">
+                <!--活动信息-->
+                <div class="tab-pane active" id="activity">
+                    <div class="row col-sm-offset-1 col-md-9">
+                        <ul class="list-unstyled">
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'activityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                        </ul>
+                        <ul class="pagination pagination-sm pagecenter">
+                            <li><a href="#">&laquo;前页</a> </li>
+                            <li class="active"><a href="#">1</a> </li>
+                            <li><a href="#">2</a> </li>
+                            <li><a href="#">3</a> </li>
+                            <li><a href="#">4</a> </li>
+                            <li><a class="disabled">...</a></li>
+                            <li><a href="#">14</a> </li>
+                            <li><a href="#">15</a> </li>
+                            <li><a href="#">后页&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--新闻信息-->
+                <div class="tab-pane" id="news">
+                    <div class="row col-md-offset-1 col-md-9">
+                        <ul class="list-unstyled">
+                            <li><h4><a href="{% url 'newsDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'newsDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'newsDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'newsDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'newsDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                            <li><h4><a href="{% url 'newsDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                        </ul>
+                        <ul class="pagination pagination-sm pagecenter">
+                            <li><a href="#">&laquo;前页</a> </li>
+                            <li class="active"><a href="#">1</a> </li>
+                            <li><a href="#">2</a> </li>
+                            <li><a href="#">3</a> </li>
+                            <li><a href="#">4</a> </li>
+                            <li><a class="disabled">...</a></li>
+                            <li><a href="#">14</a> </li>
+                            <li><a href="#">15</a> </li>
+                            <li><a href="#">后页&raquo;</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!--时间信息-->
+                <div class="tab-pane" id="acttime">
+                    <div class="row col-md-offset-1 col-md-9">
+                        <h4>XXX服务队活动总时长：<small>100小时</small></h4>
+                    </div>
+                </div>
+                <!--合格志愿者信息-->
+                <div class="tab-pane" id="qualifiedvol">
+                    <div class="row col-md-offset-1 col-md-9">
+                        <h4>合格志愿者共XX人</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>学号</th>
+                                    <th>学院</th>
+                                    <th>联系电话</th>
+                                    <th>活动时长</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>金小笨</td>
+                                    <td>1144012002</td>
+                                    <td>公共管理学院</td>
+                                    <td>18200282256</td>
+                                    <td>8小时</td>
+                                </tr>
+                                <tr>
+                                    <td>金小笨</td>
+                                    <td>1144012002</td>
+                                    <td>公共管理学院</td>
+                                    <td>18200282256</td>
+                                    <td>8小时</td>
+                                </tr>
+                                <tr>
+                                    <td>金小笨</td>
+                                    <td>1144012002</td>
+                                    <td>公共管理学院</td>
+                                    <td>18200282256</td>
+                                    <td>8小时</td>
+                                </tr>
+                                <tr>
+                                    <td>金小笨</td>
+                                    <td>1144012002</td>
+                                    <td>公共管理学院</td>
+                                    <td>18200282256</td>
+                                    <td>8小时</td>
+                                </tr>
+                                <tr>
+                                    <td>金小笨</td>
+                                    <td>1144012002</td>
+                                    <td>公共管理学院</td>
+                                    <td>18200282256</td>
+                                    <td>8小时</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <ul class="pagination pagination-sm pagecenter">
+                            <li><a href="#">&laquo;前页</a> </li>
+                            <li class="active"><a href="#">1</a> </li>
+                            <li><a href="#">2</a> </li>
+                            <li><a href="#">3</a> </li>
+                            <li><a href="#">4</a> </li>
+                            <li><a class="disabled">...</a></li>
+                            <li><a href="#">14</a> </li>
+                            <li><a href="#">15</a> </li>
+                            <li><a href="#">后页&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--注册志愿者信息-->
+                <div class="tab-pane" id="registedvol">
+                    <div class="row col-md-offset-1 col-md-9">
+                        <h4>注册志愿者共XX人</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>学号</th>
+                                    <th>学院</th>
+                                    <th>联系电话</th>
+                                    <th>活动时长</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>金小笨</td>
+                                    <td>1144012002</td>
+                                    <td>公共管理学院</td>
+                                    <td>18200282256</td>
+                                    <td>8小时</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <ul class="pagination pagination-sm pagecenter">
+                            <li><a href="#">&laquo;前页</a> </li>
+                            <li class="active"><a href="#">1</a> </li>
+                            <li><a href="#">2</a> </li>
+                            <li><a href="#">3</a> </li>
+                            <li><a href="#">4</a> </li>
+                            <li><a class="disabled">...</a></li>
+                            <li><a href="#">14</a> </li>
+                            <li><a href="#">15</a> </li>
+                            <li><a href="#">后页&raquo;</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!--志愿者分布-->
+                <div class="tab-pane" id="distribution">
+                    <div class="row col-md-offset-1 col-md-8">
+                        <h4>注册志愿者学院分布</h4>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        {% include 'footer.html' %}
+
+        <!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+
+    </body>
+</html>

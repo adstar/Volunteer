@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>全部活动</title>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="四川大学青年志愿者服务网 全部活动">
+        <meta name="author" content="zou">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/static/css/datetimepicker.min.css">
+        <!-- custom CSS here -->
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link rel="stylesheet" href="/static/css/main.css" >
+
+    </head>
+
+    <body>
+
+        {% include 'header_login.html' %}
+
+        <div class="container">
+            <!--面包屑-->
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="{% url 'home' %}">首页</a></li>
+                  <li class="avtive">全部活动</li>
+                </ol>
+            </div>
+            <!--分面搜索-->
+            <div class="actchoice col-md-8">
+                <!--按活动类型-->
+                <ul class="list-inline">
+                    <li>类型:</li>
+                    <li><a href="#">全部</a> </li>
+                    <li><a href="#">校园教辅</a></li>
+                    <li><a href="#">校园生活</a></li>
+                    <li><a href="#">社区建设</a></li>
+                    <li><a href="#">关爱青少年</a></li>
+                    <li><a href="#">扶老助残</a></li>
+                    <li><a href="#">救防保健</a></li>
+                    <li><a href="#">其他</a></li>
+                    <li></li>
+                </ul>
+                <!--按活动时间-->
+                <ul class="list-inline">
+                    <li>时间:</li>
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">明天</a></li>
+                    <li><a href="#">周末</a></li>
+                    <li><a href="#">最近一周</a></li>
+                    <li><a href="#" class="pick_datetime">选择日期</a></li>
+                    <li></li>
+                </ul>
+                <!--按活动主办方-->
+                <div id="accordion">
+                    <div class="select_mana">
+                        <h5>主办方<small><span class="glyphicon glyphicon-chevron-right"></span></small></h5>
+                    </div>
+                    <div>
+                        <ol id="selectable">
+                            <li class="ui-state-default"><a href="#">全部</a></li>
+                            <li class="ui-state-default"><a href="#">晨曦</a></li>
+                            <li class="ui-state-default"><a href="#">春风社</a></li>
+                            <li class="ui-state-default"><a href="#">方舟</a></li>
+                            <li class="ui-state-default"><a href="#">天使</a></li>
+                            <li class="ui-state-default"><a href="#">爱心俱乐部</a></li>
+                            <li class="ui-state-default"><a href="#">新科</a></li>
+                            <li class="ui-state-default"><a href="#">杏林风</a></li>
+                            <li class="ui-state-default"><a href="#">朝阳</a></li>
+                            <li class="ui-state-default"><a href="#">艺韵</a></li>
+                            <li class="ui-state-default"><a href="#">阳光</a></li>
+                            <li class="ui-state-default"><a href="#">微笑</a></li>
+                            <li class="ui-state-default"><a href="#">天南星</a></li>
+                            <li class="ui-state-default"><a href="#">星原</a></li>
+                            <li class="ui-state-default"><a href="#">晨风</a></li>
+                            <li class="ui-state-default"><a href="#">春蕾</a> </li>
+                            <li class="ui-state-default"><a href="#">小数点</a></li>
+                            <li class="ui-state-default"><a href="#">E飞翔</a></li>
+                            <li class="ui-state-default"><a href="#">经济人</a></li>
+                            <li class="ui-state-default"><a href="#">青鸟</a></li>
+                            <li class="ui-state-default"><a href="#">源泉</a></li>
+                            <li class="ui-state-default"><a href="#">红日</a></li>
+                            <li class="ui-state-default"><a href="#">腾飞</a></li>
+                            <li class="ui-state-default"><a href="#">法之风</a></li>
+                            <li class="ui-state-default"><a href="#">心语</a></li>
+                            <li class="ui-state-default"><a href="#">奔腾</a></li>
+                            <li class="ui-state-default"><a href="#">新风</a></li>
+                            <li class="ui-state-default"><a href="#">开拓者</a></li>
+                            <li class="ui-state-default"><a href="#">工商潮</a></li>
+                            <li class="ui-state-default"><a href="#">新驰</a></li>
+                            <li class="ui-state-default"><a href="#">翼翔</a></li>
+                            <li class="ui-state-default"><a href="#">行知协会</a></li>  <!-- 社团 -->
+                            <li class="ui-state-default"><a href="#">自强社</a></li>
+                            <li class="ui-state-default"><a href="#">馨心社</a></li>
+                            <li class="ui-state-default"><a href="#">其他</a></li>
+                        </ol>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <hr>
+            <!--全部活动列表-->
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+            <div class="row actlist-item">
+                <div class="col-md-3">
+                    <a href="{% url 'activityDetail' %}"><img class="img-responsive" src="/static/images/01.jpg" name="act"></a>
+                </div>
+                <div class="col-md-4">
+                    <h4><a href="{% url 'activityDetail' %}">活动标题活动标题活动标题活动</a></h4>
+                    <p class="act-type">类型</p>
+                    <ul class="list-unstyled">
+                        <li class="act-info">时间：</li>
+                        <li class="act-info">地点：</li>
+                        <li class="act-info">主办方：</li>
+                    </ul>
+                    <button type="button" class="btn btn-primary btn-sm" disabled="disabled">XXX人报名</button>
+                </div>
+            </div>
+
+            <!--分页-->
+            <div class="row text-center splitpage">
+                <div class="col-md-12">
+                    <ul class="pagination pagination-sm">
+                        <li><a href="#">&laquo;前页</a> </li>
+                        <li class="active"><a href="#">1</a> </li>
+                        <li><a href="#">2</a> </li>
+                        <li><a href="#">3</a> </li>
+                        <li><a href="#">4</a> </li>
+                        <li><a class="disabled">...</a></li>
+                        <li><a href="#">14</a> </li>
+                        <li><a href="#">15</a> </li>
+                        <li><a href="#">后页&raquo;</a></li>
+                    </ul>
+                 </div>
+            </div>
+
+        </div>
+
+        {% include 'footer.html' %}
+
+
+        <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.js"></script>
+        <script type="text/javascript" src="/static/js/datetimepicker.min.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="/static/js/datetimepicker.zh-CN.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="/static/js/jqueryui.min.js"></script>
+
+
+        <script type="text/javascript">
+             $('.pick_datetime').datetimepicker({
+                 language:  'zh-CN',
+                 weekStart: 0,
+                 autoclose: 1,
+                 todayHighlight: true,
+                 startView: 2,
+                 forceParse: 0,
+                 showMeridian: 1,
+ 		         minView: 2
+             });
+        </script>
+        <script>
+            $(function() {
+		        $( "#accordion" ).accordion({
+			        collapsible: true,
+                    active:false
+		        });
+	        })
+            $(function(){
+                $("#selectable").selectable();
+            });
+        </script>
+
+    </body>
+</html>

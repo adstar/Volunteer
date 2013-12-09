@@ -1,0 +1,300 @@
+/** ============Home============ **/
+/** Home Slides **/
+
+/** Carousel base class **/
+.carousel {
+  height: 300px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 300px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*width: 725px;*/
+  min-width: 100%;
+  height: 300px;
+}
+.carousel-caption p {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+
+
+/** Home Others **/
+.homeshow,.homereview,.nowactivity,.homerelative {
+    margin-bottom: 30px;
+}
+.homereview, .homerelative {
+    padding-left: 35px;
+}
+
+.homeshow {
+    margin-top: 10px;
+    padding-left: 25px;
+}
+.reviewlist {
+    padding-top: 5px;
+}
+p.reviewact-header{
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+p.reviewact-info {
+    font-size: 13px;
+}
+
+.nowactivity {
+    margin-top: 5px;
+    padding-left: 10px;
+}
+h4.nowactivity-header{
+   padding-left: 14px;
+   margin-bottom: 20px;
+}
+li.nowact-info{
+    font-size: 13px;
+    margin-bottom: 2px;
+    color: #808080;
+}
+.nowactivity-body {
+    margin-bottom: 10px;
+}
+img[name="nowacts"] {
+    width: 160px;
+    height: 213px;
+}
+p.subtitle {
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+}
+
+.homerelative{
+    margin-top: 12px;
+}
+ul.rellink{
+    padding-top: 5px;
+    padding-left: 2px;
+}
+li.rellink{
+    margin-bottom: 3px;
+}
+
+
+
+/** ============activity_list, news_list============ **/
+.actlist-item, .newslist-item{
+    margin-top: 30px;
+    margin-bottom: 38px;
+    padding-left: 75px;
+}
+img[name="act"] {
+    margin-left:75px ;
+    width: 140px;
+    height: 185px;
+}
+img[name="news"] {
+    margin-left: 55px;
+    width: 160px;
+    height: 213px;
+}
+p.act-type,p.news-info{
+    color: #808080;
+    font-size: 13px;
+}
+li.act-info{
+    margin-bottom: 3px;
+}
+/* 分页 */
+.splitpage{
+    margin-bottom: 30px;
+}
+/* jQuery (下拉选择面板)select-accordion */
+.select_mana{
+    font-size: 13px;
+    margin-bottom: 10px;
+    width: 80px;
+    /*border: none;*/
+}
+#selectable {
+    list-style-type: none;
+    margin-left: 13px;
+    padding: 0;
+    width: 580px;
+}
+#selectable li {
+    margin: 4px;
+    padding: 1px;
+    float: left;
+    width: 80px;
+    height: 18px;
+    font-size: .6;
+    text-align: center;
+}
+
+
+
+/** ============activity_detail============ **/
+.actdetail-item{
+    padding-left: 50px;
+    margin-bottom: 25px;
+}
+li.actdetail-info{
+    color: #808080;
+    margin-bottom: 6px;
+}
+img[name="actdetail"] {
+    margin-top: 8px;
+    margin-left:40px ;
+    width: 185px;
+    height: 265px;
+}
+h4.activity{
+    font-weight: bold;
+}
+.actcontent,.actcomment {
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.actmap, .actrelative{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+button[name="doact"]{
+    margin-right: 10px;
+}
+iframe{
+    width: 340px;
+    height: 200px;
+}
+
+/*评论框，留言板*/
+.ouComment{
+    margin-bottom: 15px;
+    padding-left: 4px;
+}
+.btnmess{
+    margin-top: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+/*活动评论，我的留言*/
+span.counts{
+    font-size: 13px;
+    margin-left: 40px;
+}
+.othermess{
+    padding-left: 10px;
+    margin-bottom: 7px;
+}
+ul.othermess{
+    float: left;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+li.listmess{
+    float: left;
+    margin-bottom: 15px;
+}
+/*用户小头像*/
+img[name="usersm"]{
+    width: 55px;
+    height: 55px;
+    margin: 0 0 0 0;
+}
+.mess-photo{
+    float: left;
+    display: inline;
+    padding-top: 5px;
+}
+.mess-info{
+    margin-left: 70px;
+}
+span.mess-ut{
+    color: #808080;
+    font-size: 12px;
+}
+.mess-body{
+    font-size: 13px;
+    float: right;
+    display: inline;
+    margin-left: 70px;
+    margin-top: -33px;
+}
+
+
+
+/*相关活动*/
+ul.relactivity{
+    padding-top: 5px;
+}
+li.relactivity{
+    margin-bottom: 3px;
+}
+/*用户列表头像*/
+ul.reluser{
+    padding-top: 10px;
+    margin-bottom: 70px;
+}
+img[name="userxs"]{
+    width: 48px;
+    height: 48px;
+    margin: 0 0 0 0;
+}
+
+
+
+/** ============news_detail============  **/
+.newshead{
+    text-align: center;
+    margin-bottom: 20px;
+}
+p.news_info{
+    text-align: center;
+}
+label.newsstate{
+    color: #808080;
+}
+img[name="newsdetail"]{
+    width: 575px;
+    height: 257px;
+}
+.newscontent{
+    margin: 25px 5px 30px 5px;
+    padding: 0 50px 0 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>新闻详情页</title>
+
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="四川大学青年志愿者服务网 新闻详细内容">
+        <meta name="author" content="zou">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <!-- custom CSS here -->
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link href="/static/css/main.css" rel="stylesheet">
+
+        <!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+
+        {% include 'header_login.html' %}
+
+        <div class="container">
+            <!--面包屑-->
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                  <li><a href="{% url 'home' %}">首页</a></li>
+                  <li><a href="{% url 'newsList' %}">全部新闻</a></li>
+                  <li class="avtive">新闻详情</li>  <!--根据实际情况变化-->
+                </ol>
+            </div>
+            <!--新闻详情-->
+            <div class="col-md-offset-1 col-md-10">
+                <!--新闻标题及简单信息-->
+                <h2 class="newshead">Elon Musk和乔布斯的智慧（上）</h2>
+                <div>
+                    <p class="news_info">XXXX <label class="newsstate">发表于</label> yyyy-MM-DD hh-mm-ss， XXX<label class="newsabstract">人浏览过</label></p>     <!--多少人浏览过-->
+                </div>
+                <!--新闻图片-->
+                <div align="center">
+                    <img src="/static/images/01.jpg" alt="" class="img-responsive" name="newsdetail">
+                </div>
+                <!--新闻正文-->
+                <div class="newscontent">
+                    <p>Elon Musk和乔布斯，这两位科技界的万人迷都曾分别颠覆了多个不同的行业。
+                        在TED策划人Chris Anderson看来，Musk和乔布斯二人都具有那种由坚定的内在信仰所驱动的系统性设计思维。
+                    </p>
+                    <p>当未来的历史学家在回顾 21 世纪的进程时，一定会提到一年前发生在 Elon Musk 卧室里面的那一刻。对于 Musk 来说，这种突破性的时刻每隔几个月就会发生一次。
+                        有时是在他冲凉时，有时是在晚上睡觉前，而有时，就像这一次一样，是在半夜 2 点。
+                    </p>
+                    <p>
+                        “我意识到氧气 - 甲烷火箭发动机能够达到比 380 还要强大的推力！”虽然这听起来并没有那么，呃，能够推动一番伟大的革命。但你要知道，配备这种发动机的火箭能够窜出大气层并到达遥远的火星。而火星本身具有大量的二氧化碳和水，可以用来合成我们上述提到的甲烷和氧气。因此，这就意味着火箭可以自行为它的返程合成燃料！这足以大大加速我们实现地球与火星之间的往返旅程。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {% include 'footer.html' %}
+    
+    </body>
+</html>

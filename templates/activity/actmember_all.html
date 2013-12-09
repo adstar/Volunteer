@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>活动全体成员</title>
+
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="四川大学青年志愿者服务网 新闻详细内容">
+    <meta name="author" content="zou">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <!-- custom CSS here -->
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/user.css">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    {% include 'header_raw.html' %}
+
+     <div class="container">
+        <div class="row col-sm-offset-1 col-md-5 userlist-header">
+            <!--header-->
+            <div class="userlist-title">
+                <h2>XXX活动全体成员</h2>
+            </div>
+            <div class="userchoicelists">
+                <ul class="list-inline tabs">
+                    <li><a class="actchoice dealwith" href="#join" data-toggle="tab">报名的</a> </li>
+                    <li><a class="actchoice dealwith" href="#interested" data-toggle="tab">感兴趣的</a> </li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="row col-sm-offset-1 col-md-8 actuserlists tab-content">
+                <ul class="list-inline tab-pane active" id="join">
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+
+
+                </ul>
+
+                <ul class="list-inline tab-pane" id="interested">
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                    <li class="actmember" data-toggle="popover" data-placement="top" data-content="金小笨" data-trigger="hover">
+                        <a href="{% url 'userPage' %}"><img src="/static/images/01.jpg" name="usersm"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+     </div>
+
+    {% include 'footer.html' %}
+
+    <script>
+        $('.actmember').popover()
+    </script>
+
+
+</body>
+</html>

@@ -34,3 +34,12 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# db folder
+db/
+
+# file folder
+file/
+
+# .DS_STORE file
+.DS_STORE

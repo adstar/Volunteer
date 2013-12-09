@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>校青志Home</title>
+
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="四川大学青年志愿者服务网 活动组织方">
+        <meta name="author" content="zou">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <!-- custom CSS here -->
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link rel="stylesheet" href="/static/css/user.css">
+
+
+    </head>
+    <body>
+
+        {% include 'header_xqz.html' %}
+
+        <div class="container">
+
+            <div class="row col-sm-offset-1 col-md-5 deal">
+                <div class="secondtitle">
+                    <h2>待审核活动</h2>
+                </div>
+            </div>
+
+            <div class="col-md-offset-1 col-md-10 dealact">
+                <ul class="list-unstyled">
+                    <li><h4><a href="{% url 'xqzActivityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                    <li><h4><a href="{% url 'xqzActivityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                    <li><h4><a href="{% url 'xqzActivityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                    <li><h4><a href="{% url 'xqzActivityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                    <li><h4><a href="{% url 'xqzActivityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                    <li><h4><a href="{% url 'xqzActivityDetail' %}" class="dealitem">社区支教</a><small>[2013.9.12]</small></h4></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <!--分页-->
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <ul class="pagination pagination-sm">
+                        <li><a href="#">&laquo;前页</a> </li>
+                        <li class="active"><a href="#">1</a> </li>
+                        <li><a href="#">2</a> </li>
+                        <li><a href="#">3</a> </li>
+                        <li><a href="#">4</a> </li>
+                        <li><a class="disabled">...</a></li>
+                        <li><a href="#">14</a> </li>
+                        <li><a href="#">15</a> </li>
+                        <li><a href="#">后页&raquo;</a></li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+        {% include 'footer.html' %}
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Info_change</title>
+
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="四川大学青年志愿者服务网 新闻详细内容">
+        <meta name="author" content="zou">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/static/css/jquery.Jcrop.css">
+        <!-- custom CSS here -->
+        <link rel="stylesheet" href="/static/css/common.css">
+        <link rel="stylesheet" href="/static/css/user.css">
+
+        <!-- Bootstrap core JavaScript -->
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/js/jqueryui.min.js"></script>
+        <script type="text/javascript" src="/static/js/jcrop/jquery.Jcrop.min.js"></script>
+        <script type="text/javascript" src="/static/js/jcrop/preview.js"></script>
+        <!--custom script-->
+        <script>
+            <!--显示与隐藏-->
+            $(function() {
+                $( "#changephoto").accordion({
+			        collapsible: true,
+                    active:false
+		        });
+                 $("#changeemail" ).accordion({
+			        collapsible: true,
+                    active:false
+		        });
+		        $( "#changepwd" ).accordion({
+			        collapsible: true,
+                    active:false
+		        });
+                 $("#changetel" ).accordion({
+			        collapsible: true,
+                    active:false
+		        });
+	        });
+        </script>
+        <script language="JavaScript">
+            jQuery(function($){
+            //  I did JSON.stringify(jcrop_api.tellSelect()) on a crop I liked:
+            var c = {"x":55,"y":55,"x2":115,"y2":115,"w":60,"h":60};
+            $('#preview_wrapper').Jcrop({
+                bgFade: true,
+                setSelect: [c.x,c.y,c.x2,c.y2],
+                <!--light style-->
+                bgOpacity: 0.5,
+                bgColor: 'white',
+                addClass: 'jcrop-light',
+                <!--裁剪后的图片预览-->
+                onChange:showPreview,
+                onSelect:showPreview,
+                aspectRatio:1
+                });
+            });
+
+            function showPreview(coords){
+                var rx = 100 / coords.w;
+                var ry = 100 / coords.h;
+
+                $('#previewsm').css({
+                    width: Math.round(rx * 35) + 'px',
+                    height: Math.round(ry * 35) + 'px'
+                })
+            }
+        </script>
+    </head>
+
+    <body>
+
+        {% include 'header_login.html' %}
+
+        <div class="container">
+            <div class="row col-sm-offset-1 col-md-5 userlist-header">
+                <!--账号设置-->
+                <div class="userlist-title">
+                    <h2>账号设置</h2>
+                </div>
+             </div>
+        </div>
+
+        <!--用户信息更新表单-->
+        <div class="container">
+            <!--<div class="col-sm-offset-1">-->
+                <form class="form-horizontal form-infochange" role="form">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">学号：</label>
+                        <div class="col-sm-4">
+                            <label class="info">1144012002</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">姓名：</label>
+                        <div class="col-sm-4">
+                            <label class="info">金小笨</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">头像：</label>
+                        <div class="col-sm-6">
+                            <!--修改头像-->
+                            <div id="changephoto">
+                                <div>
+                                    <img src="/static/images/01.jpg" name="usersm"><label class="infochange"><a >修改</a> </label>
+                                </div>
+                                <div class="choicephoto">
+                                    <h5><Bold>从电脑中选择你喜欢的照片</Bold></h5>
+                                    <label for="upload_img">你可以上传JPG、JPEG、GIF、PNG或BMP文件</label>
+                                    <input type="file" id="upload_img" onchange="onUploadImgChange(this)">
+                                    <br>
+                                    <div id="preview_wrapper">
+                                        <div id="preview_fake">
+                                            <img id="preview" onload="onPreviewLoad(this)">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img id="previewsm">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">邮箱：</label>
+                        <!--修改邮箱-->
+                        <div class="col-sm-4" id="changeemail">
+                            <div>
+                                <label class="info">ray6080@gmail.com</label><label class="infochange"><a href="">修改</a> </label>
+                            </div>
+                            <div class="col-sm-6 changeemail">
+                                <input type="email" class="form-control" placeholder="输入新的邮箱地址">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">密码：</label>
+                        <div class="col-sm-5" id="changepwd">
+                            <div>
+                                <label class="info"><a>修改密码</a></label>
+                            </div>
+                            <div class="changepwd">
+                                <div class="form-group">
+                                    <label class="col-sm-2 pwslable">原密码</label>
+                                    <div class="col-sm-5">
+                                        <input type="password" class="form-control" placeholder="请输入原密码">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 pwslable">新密码</label>
+                                    <div class="col-sm-5">
+                                        <input type="password" class="form-control" placeholder="请输入新密码">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 pwslable">确认密码</label>
+                                    <div class="col-sm-5">
+                                        <input type="password" class="form-control" placeholder="再次输入新密码">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">联系电话：</label>
+                        <div class="col-sm-4" id="changetel">
+                            <div>
+                                <label class="info">18200282256</label><label class="infochange"><a href="">修改</a> </label>
+                            </div>
+                            <div class="col-sm-6 changeemail">
+                                <input type="tel" class="form-control" placeholder="输入新的联系电话">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">学院：</label>
+                        <div class="col-sm-4">
+                            <label class="info">公共管理学院</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-4">
+                            <button type="submit" class="btn btn-primary active">保存设置</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="alert alert-info">
+                    账号设置更新成功
+                </div>
+                <div class="alert alert-danger">
+                    账号设置更新失败
+                </div>
+
+        </div>
+
+
+
+        {% include 'footer.html' %}
+
+
+
+    </body>
+</html>

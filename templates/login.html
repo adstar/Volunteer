@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>登录</title>
+
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="四川大学青年志愿者 用户登录">
+        <meta name="author" content="zou">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+        <!-- custom CSS here -->
+        <link href="/static/css/log_sign.css" rel="stylesheet">
+
+        <!-- Bootstrap core JavaScript -->
+		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+
+
+    </head>
+
+    <body>
+        <div class="container">
+            <!--header-->
+            <div class="col-md-12">
+                <h1 class="page-header"><a href="{% url 'home' %}"><img class="logo" src="/static/images/logom.jpg" alt="logo"/>四川大学青年志愿者&nbsp;<small>服务网</small></a></h1>
+            </div>
+        </div>
+
+        <!--登录表单-->
+        <div class="container">
+           <div class=" .col-xs-6 .col-sm-4">
+            <form class="form-signin" onsubmit="return validate_form()" method="post" name="loginForm" action="/login/handler/">
+               <div class="form-group">
+                    <h3 class="form-signin-heading">欢迎登录<span class="noid">没有账号？<a href="{% url 'register' %}" >立即注册</a></span></h3>
+               </div>
+               <div class="form-group">
+                   <input type="text" class="form-control" placeholder="学号" required="autofocus" name="username">
+               </div>
+               <div class="form-group">
+                   <input type="password" class="form-control" placeholder="密码" required="autofocus" name="password">
+               </div>
+               <div class="form-group">
+               <label class="checkbox" name="remember">
+                 <input type="checkbox" value="remember-me"> 下次自动登录 | <a href="{% url 'resetPassword' %}">忘记密码？</a>
+               </label>
+               </div>
+               <button class="btn btn-primary btn-block active" type="submit">登录</button>
+            </form>
+           </div>
+       </div>
+
+       {% include 'footer.html' %}
+
+    </body>
+</html>
